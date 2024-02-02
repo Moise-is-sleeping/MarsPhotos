@@ -32,10 +32,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.marsphotos.R
-import com.example.marsphotos.ui.screens.HomeScreen
-import com.example.marsphotos.ui.screens.MarsViewModel
+
 
 @Composable
 fun MarsPhotosApp() {
@@ -49,9 +49,8 @@ fun MarsPhotosApp() {
                 .fillMaxSize()
                 .padding(it)
         ) {
-            val marsViewModel: MarsViewModel =
-                viewModel(factory = MarsViewModel.Factory)
-            HomeScreen(marsUiState = marsViewModel.marsUiState)
+            val marsViewModel: MarsViewModel = viewModel(factory = MarsViewModel.Factory)
+                 HomeScreen(marsUiState = marsViewModel.marsUiState)
         }
     }
 }

@@ -13,24 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.marsphotos.fake
 
-import com.example.marsphotos.model.MarsPhoto
+package com.example.marsphotos.theme
 
-object FakeDataSource {
+import androidx.compose.material3.Typography
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 
-    private const val idOne = "img1"
-    private const val idTwo = "img2"
-    private const val imgOne = "url.one"
-    private const val imgTwo = "url.two"
-    val photosList = listOf(
-        MarsPhoto(
-            id = idOne,
-            imgSrc = imgOne
-        ),
-        MarsPhoto(
-            id = idTwo,
-            imgSrc = imgTwo
-        )
+// Set of Material typography styles to start with
+val Typography = Typography(
+    bodyLarge = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
+        letterSpacing = 0.5.sp
     )
-}
+)
